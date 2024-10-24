@@ -6,11 +6,13 @@
 }
 
 body {
-    background-color: #f8f8f8;
+    background: linear-gradient(to bottom right, #f8f8f8, #e0f7fa); 
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures body takes full height */
+    min-height: 100vh; 
+    font-size: 18px; 
+    line-height: 1.6; 
 }
 
 /* Header styling */
@@ -54,7 +56,7 @@ span {
     border-bottom: 3px solid rgba(43, 231, 222, 0.808);
 }
 
-/* Contact Button Styles */
+
 .contact {
     padding: 10px 28px; 
     background-color: white;
@@ -72,22 +74,27 @@ span {
     color: white; 
 }
 
-/* Main content area */
+
 .content {
-    padding-top: 100px; /* Space for the fixed header */
-    flex: 1; /* Takes up remaining space */
+    padding-top: 100px; 
+    flex: 1; 
 }
 
-/* Hobbies section styling */
+
 .hobbies {
-    padding: 20px;
+    padding: 40px; 
     max-width: 800px;
     margin: auto;
+    background: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
 }
 
 .hobbies h2 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+    font-size: 2.5em; 
+    color: #2b2b2b; 
 }
 
 .hobby-list {
@@ -96,26 +103,27 @@ span {
 }
 
 .hobby {
-    background: #fff;
-    padding: 15px;
-    margin: 10px 0;
+    background: #f9f9f9; 
+    padding: 20px; 
+    margin: 15px 0; 
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.inline-interests {
-    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .inline-interests span {
-    display: inline; 
-    margin: 0 10px;
-    padding: 10px;
-    background: #e0f7fa;
+    display: inline-block; 
+    margin: 10px; 
+    padding: 12px 15px; 
+    background: #e0f7fa; 
     border-radius: 5px;
+    font-weight: 600; 
+    transition: background 0.3s ease;
 }
 
-/* Footer styling */
+.inline-interests span:hover {
+    background: rgba(43, 231, 222, 0.6); 
+}
+
 .footer {
     position: relative;
     bottom: 0;
