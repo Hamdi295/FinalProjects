@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	min-height: 100vh;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    flex-direction: column;
+}
+.container{
+	width: 100%;
+	padding: 35px 10%;
+    flex: 1;
+    margin-top: 3cm;
+}
+.container{
+	padding-right: calc(10% - 30px);
+}
+main.row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+.col header.title{
+	font-family: helvetica;
+	color: #11a372;
+	padding: 0px 0px 20px 30px;
+}
+.col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid #bababa;
+}
+.col .contents .box{
+	position: relative;
+	padding: 20px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+}
+.col .contents .box:hover{
+	box-shadow: 0px 3px 12px 0px #ccc;
+	border: 1px solid transparent;
+}
+.col .contents .box::before{
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 0;
+	background-color: #11a372;
+	border: 2px solid white;
+}
+.box h4{
+	position: relative;
+	color: #11a372;
+}
+.box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	font-family: helvetica;
+	color: #444;
+}
+.box p{
+	line-height: 1.2;
+	color: #666;
+	font-size: 17px;
+}
+@media(max-width: 768px){
+	main.row{
+		grid-template-columns: 1fr;
+	}
+	.row .col:nth-child(2){
+		margin-top: 30px;
+	}
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.788);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
+.logo:hover {
+    color: rgba(43, 231, 222, 0.808);
+    text-shadow: 0 0 25px rgba(43, 231, 222, 0.808), 0 0 50px rgba(43, 231, 222, 0.808);
+    transform: scale(1.1);
+}
+span {
+    color: rgba(43, 231, 222, 0.808);
+}
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.navbar a:hover,.navbar a:active {
+    color: rgba(43, 231, 222, 0.808);
+    border-bottom: 3px solid rgba(43, 231, 222, 0.808);
+    }
+.contact {
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.contact:hover {
+    background-color: rgba(43, 231, 222, 0.808);
+    box-shadow: 0 0 25px rgba(43, 231, 222, 0.808);
+    color: white; 
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+    margin-top: auto;
+    clear: both;
+    
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a {
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgba(43, 231, 222, 0.808);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px rgba(43, 231, 222, 0.808), 0 0 10px rgba(43, 231, 222, 0.808);
+    transition: 0.3s ease;
+}
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-10px);
+    color: rgba(43, 231, 222, 0.808);
+    border: 2px solid rgba(43, 231, 222, 0.808);
+}
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover {
+    border-bottom: 3px solid rgba(43, 231, 222, 0.808);
+}
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo"><span>H</span>amdi</a>
+        <nav class="navbar">
+            <a href="./skills.html">Skills</a>
+            <a href="./education.html" class="active">Education & Experience</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./hobbies.html">Hobbies & Interests</a>
+        </nav>
+        <a href="../index.html#contact" class="contact">Contact Me</a>
+    </header>
+    <div class="container">
+	
+        <main class="row">    
+            <!--   *******  Education Section Starts  *******   -->
+    
+            <section class="col">
+                
+                <header class="title">
+                    <h2>EDUCATION</h2>
+                </header>
+    
+                <div class="contents">
+                    
+                    <div class="box">
+                        <h4>2014 - 2018</h4>
+                        <h3>High School Diploma</h3>
+                        <p>I earned my High School Diploma in Tunisia, specifically through the Baccalauréat Technique program. This rigorous academic path allowed me to delve deeply into specialized subjects, blending theoretical knowledge with practical skills. Completing the Baccalauréat not only marked a significant achievement in my education but also prepared me for future endeavors, equipping me with a strong foundation for my career aspirations. The experience was both challenging and rewarding, shaping my critical thinking and problem-solving abilities.</p>
+                    </div>
+    
+                    <div class="box">
+                        <h4>2018 - 2021</h4>
+                        <h3>Bachelor's Degree</h3>
+                        <p>I earned my Bachelor's Degree in Industrial Management from the Higher Institute of Industrial Management in Sfax, Tunisia, specializing in Industrial Computing. This program equipped me with a strong foundation in both technical and management skills, allowing me to navigate the complexities of industrial environments. Through a combination of theoretical knowledge and practical applications, I developed expertise in optimizing processes and leveraging technology to enhance efficiency and productivity in various industrial settings.</p>
+                    </div>
+    
+                    <div class="box">
+                        <h4>2021 - 2024</h4>
+                        <h3>Engineering</h3>
+                        <p>I proudly earned my engineering diploma in Computer Software from a distinguished private university in North Africa, located in Tunisia. This rigorous program equipped me with a solid foundation in software development, programming languages, and system design. Throughout my studies, I engaged in hands-on projects that enhanced my problem-solving skills and technical expertise, preparing me to tackle real-world challenges in the ever-evolving field of technology.</p>
+                    </div>
+                    <div class="box">
+                        <h4>Now</h4>
+                        <h3>Web Development Program</h3>
+                        <p>I am currently continuing my studies in web development at Tamwood in Canada. This program offers a comprehensive curriculum that covers both the technical and creative aspects of web design and development. I am excited to immerse myself in hands-on projects, learn from experienced instructors, and collaborate with fellow students from diverse backgrounds. This opportunity not only enhances my skills but also allows me to stay updated with the latest industry trends, preparing me for a successful career in the ever-evolving field of web development.</p>
+                    </div>
+    
+                </div>
+            </section>
+    
+            <!--   *******  Education Section Ends  *******   -->
+    
+            <!--   *******  Experience Section Starts  *******  -->
+    
+            <section class="col">
+                
+                <header class="title">
+                    <h2>EXPERIENCE</h2>
+                </header>
+    
+                <div class="contents">
+                    
+                    <div class="box">
+                        <h4>2021</h4>
+                        <h3>Internship In TCA</h3>
+                        <p>During my internship at TCA, a leading company in automation, I had the opportunity to immerse myself in the cutting-edge world of automated systems. My role involved collaborating with a talented team to design and implement innovative solutions that optimize industrial processes. I gained hands-on experience in various automation technologies, enhancing my technical skills and understanding of the industry. </p>
+                    </div>
+    
+                    <div class="box">
+                        <h4>2023</h4>
+                        <h3>Internship In SOTUFAC</h3>
+                        <p>I completed an internship at Sotufac, where I contributed to the development of an e-commerce webpage. This experience allowed me to apply the skills I had acquired in my studies and work on real-world projects. Collaborating with a talented team, I gained valuable insights into e-commerce design, user experience, and backend functionality. This internship not only enhanced my technical abilities but also deepened my understanding of industry best practices, setting a strong foundation for my career in web development.</p>
+                    </div>
+    
+                    <div class="box">
+                        <h4>2024</h4>
+                        <h3>Internship In KMF</h3>
+                        <p>Our project at KMF aims to develop a robust DevOps solution specifically for applications using Kubernetes. This approach allows us to accelerate and enhance the reliability of our software deliveries while fostering close collaboration between development and operations teams. By integrating continuous integration and continuous deployment (CI/CD) pipelines tailored for Kubernetes, we aim to optimize development cycles, reduce time-to-market, and improve the quality of deployments.</p>
+                    </div>
+    
+                </div>
+            </section>
+    
+            <!--   *******  Experience Section Ends   *******  -->
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/hamdi.rebai.52/"><i class='bx bxl-facebook-circle' ></i></a>
+            <a href="https://www.linkedin.com/in/hamdi-rebai/"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.instagram.com/hamdirebai13/"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://github.com/Hamdi295"><i class='bx bxl-github'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="../index.html#about">About Me</a>
+            </li>
+            <li>
+                <a href="../index.html#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#">Privacy Policy</a>
+            </li>
+        </ul>
+        <p class="copyright"> 2024 Hamdi ! All Rights Reserved</p>
+    </footer>
+</body>
+</html>
