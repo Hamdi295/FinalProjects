@@ -126,23 +126,30 @@ span {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 .inline-interests {
+    display: flex; /* Use flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Add spacing between items */
     position: relative;
     top: 10px;
-    left: 135px;
+    left: auto; /* Remove the fixed left alignment */
     animation: fadeInUp 1.5s ease-out forwards;
 }
 
 /* Apply delay to each span inside inline-interests for sequential animation */
 .inline-interests span {
     display: inline-block;
-    margin: 10px;
+    margin: 0; /* Reset margin for better control with gap */
     padding: 12px 15px;
     background: #e0f7fa;
     border-radius: 5px;
     font-weight: 600;
     transition: background 0.3s ease;
     animation: fadeInUp 1.5s ease-out forwards;
-    animation-delay: var(--delay); /* We'll use the delay variable to stagger animations */
+    animation-delay: var(--delay);
+    text-align: center; /* Center text inside each span */
+    flex: 1 1 auto; /* Allow spans to adjust their width */
+    min-width: 100px;
 }
 
 /* Define custom delays for each item */
@@ -321,6 +328,16 @@ span {
 
     .contact {
         display: none;  
+    }
+    .inline-interests {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        gap: 15px; /* Increase spacing between items */
+    }
+
+    .inline-interests span {
+        flex: none; /* Remove the flex property for individual spans */
+        width: 80%; /* Ensure spans take up a significant portion of the screen */
     }
     @media (max-width: 480px) {
         .logo {
