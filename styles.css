@@ -141,12 +141,12 @@ max-width: 800px;
 }
 /* About Section Styles */
 .about {
-    display: flex; /* Flexbox for layout */
-    justify-content: center; /* Center content */
-    align-items: center; /* Center items vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     padding: 12% 8%; /* Padding for spacing */
-    gap: 10em; /* Space between items */
-    background: black; /* Background color */
+    gap: 10em; 
+    background: black; 
 }
 .about-img img {
     position: relative;
@@ -298,4 +298,99 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+}
+.social a[target="_blank"] {
+    color: rgba(57, 24, 206, 0.808); /* A unique color for external links */
+    transform: scale(1.1); /* Slightly increase the size */
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgba(43, 231, 222, 0.808);
+    text-shadow: 0 0 25px rgba(43, 231, 222, 0.808);
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    z-index: 20;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Hide the navbar by default */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+    }
+
+    /* Show navbar when checkbox is checked */
+    .menu-toggle:checked + .hamburger + .navbar {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    /* Show the hamburger icon */
+    .hamburger {
+        display: block;
+    }
+
+    .contact {
+        display: none;  /* Hide contact button on mobile */
+    }
+    .about {
+        flex-direction: column; /* Stack content vertically */
+        gap: 3em; /* Adjust the gap between items */
+        padding: 50px 15px; /* Adjust padding for mobile screens */
+    }
+
+    .about-img img {
+        width: 250px; /* Reduce image size */
+        margin-bottom: 20px; /* Add space between the image and text */
+    }
+
+    .about-content h2 {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+
+    .about-content h3 {
+        font-size: 42px; /* Adjust font size for smaller screens */
+    }
+
+    .about-content p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
 }

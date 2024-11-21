@@ -9,14 +9,24 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo" class="active"><span>H</span>amdi</a>
+        <a href="../index.html" class="logo"><span>H</span>amdi</a>
+        
+        <!-- Hidden checkbox for toggling the navbar -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Hamburger icon (label for the checkbox) -->
+        <label for="menu-toggle" class="hamburger">
+            <i class='bx bx-menu'></i> <!-- Boxicons icon -->
+        </label>
+        
         <nav class="navbar">
-            <a href="./pages/skills.html" >Skills</a>
+            <a href="./pages/skills.html">Skills</a>
             <a href="./pages/education.html">Education & Experience</a>
             <a href="./pages/projects.html">Projects</a>
-            <a href="./pages/hobbies.html">Hobbies & Interests</a>
+            <a href="./pages/hobbies.html" class="active">Hobbies & Interests</a>
         </nav>
-        <a href="#contact" class="contact">Contact Me</a>
+        
+        <a href="../index.html#contact" class="contact">Contact Me</a>
     </header>
     <section class="home">
         <div class="home-content">
@@ -61,14 +71,14 @@
     </section>
     <footer class="footer">
         <div class="social">
-            <a href="https://www.facebook.com/hamdi.rebai.52/"><i class='bx bxl-facebook-circle' ></i></a>
-            <a href="https://www.linkedin.com/in/hamdi-rebai/"><i class='bx bxl-linkedin-square'></i></a>
-            <a href="https://www.instagram.com/hamdirebai13/"><i class='bx bxl-instagram-alt'></i></a>
-            <a href="https://github.com/Hamdi295"><i class='bx bxl-github'></i></a>
+            <a href="https://www.facebook.com/hamdi.rebai.52/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.linkedin.com/in/hamdi-rebai/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="https://www.instagram.com/hamdirebai13/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://github.com/Hamdi295" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
         <ul class="list">
             <li>
-                <a href="#">FAQ</a>
+                <a href="./pages/FAQ.html">FAQ</a>
             </li>
             <li>
                 <a href="#">Services</a>
